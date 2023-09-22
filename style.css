@@ -12,52 +12,89 @@ a {
     text-decoration: underline;
 }
 
-body {
-    background-color: #333333;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 100;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding: 3rem 0;
+a:hover {
+    opacity: .8;
 }
 
-main, header {
+body {
+    background-color: #121617;
+    color: #F2F2F2;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main,
+.header {
     max-width: 720px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
 }
 
 .header {
-    padding-bottom: 2rem;
+    text-align: center;
 }
 
 .header__title {
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: .3rem;
+    line-height: 1.5;
+    text-decoration: none;
+    
+}
+
+.main.landing {
+    max-width: 1248px;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.main__copy,
+.main__image  {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__copy__title {
+    font-size: 5rem;
     font-weight: 300;
     margin-bottom: .3rem;
     line-height: 1.5;
     text-decoration: none;
 }
 
-.header__description {
-    font-size: 1.1rem;
-    font-weight: 100;
+.main__copy__paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.main {
-    padding: 2rem 0;
+.main__copy__description {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: left;
 }
 
-.main__tagline {
+.main__copy__tagline {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    font-weight: 100;
+    font-weight: 500;
+    line-height: 1.75rem;
 }
 
-.bold {
-    font-weight: 500;
-}
 
 .main__invite {
     font-size: .9rem;
@@ -69,6 +106,10 @@ main, header {
     font-size: 3rem;
     font-weight: 300;
     margin-bottom: 3rem;
+}
+
+.main__header.thankyou {
+    text-align: center;
 }
 
 .main__title {

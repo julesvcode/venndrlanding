@@ -40,7 +40,6 @@ body {
     margin-bottom: .3rem;
     line-height: 1.5;
     text-decoration: none;
-    
 }
 
 .main.landing {
@@ -58,13 +57,14 @@ body {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .main__image {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1200ms ease-in-out;
 }
 
 .main__copy__title {
@@ -73,6 +73,7 @@ body {
     margin-bottom: .3rem;
     line-height: 1.5;
     text-decoration: none;
+    animation: fadeLeft 600ms ease-in-out;
 }
 
 .main__copy__paragraph {
@@ -86,6 +87,7 @@ body {
     font-weight: 700;
     line-height: 1.25;
     text-align: left;
+    animation: fadeLeft 900ms ease-in-out;
 }
 
 .main__copy__tagline {
@@ -93,6 +95,7 @@ body {
     margin-bottom: 2rem;
     font-weight: 500;
     line-height: 1.75rem;
+    animation: fadeLeft 1200ms ease-in-out;
 }
 
 
@@ -155,4 +158,93 @@ ol {
 
 ol > ul {
     padding-top: 2rem;
+}
+
+.main__invite {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 25rem;
+    animation: fadeInDelay 1.5s ease-in-out;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    border: 1px solid #F2F2F2;
+    padding: .25rem;
+    border-radius: .25rem;
+}
+
+form input {
+    background-color: transparent;
+    color: #F2F2F2;
+    border: none;
+}
+
+.email {
+    width: 100%;
+    padding: .25rem;
+}
+
+.SubmitButton {
+    background-color: #F2F2F2;
+    color: #121617;
+    border-radius: .125rem;
+    width: fit-content;
+    padding: 0 1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main.landing {
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .main__copy__title {
+        font-size: 4rem;
+    }
+
+    .main__copy__description {
+        font-size: 2rem;
+    }
+
+    .main__copy__tagline {
+        font-size: 1rem;
+    }
+}
+
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInDelay {
+    0%, 66% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
